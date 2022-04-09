@@ -26,7 +26,11 @@
         <hsqldb.version>2.3.5</hsqldb.version>
         <logback.version>1.2.3</logback.version>
         <glassfish-javax.el.version>3.0.0</glassfish-javax.el.version>
-    </properties>
+  <sonar.organization>devopspractice247</sonar.organization>
+  <sonar.host.url>http://localhost:9000</sonar.host.url>
+  <sonar.login>6de41057b588e2449e3a8d892805de1999de21a3</sonar.login>
+  <!-- <sonar.password>anvesh247</sonar.password> -->
+</properties>
 
     <build>
         <finalName>store-webapp</finalName>
@@ -150,17 +154,18 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <id>ojo-libs-snapshot</id>
-            <name>ojo-snapshots</name>
-            <url>https://oss.jfrog.org/artifactory/libs-snapshot</url>
-        </repository>
-    </repositories>
+    <distributionManagement>
+
+<snapshotRepository>
+	<id>nexus</id>
+	<name>nforum snapshot nexux repository</name>
+	<url>http://localhost:8081/repository/store-snapshot/</url>
+</snapshotRepository>
+
+<repository>
+	<id>nexus</id>
+	<name>nforum release nexus repository</name>
+	<url>http:http://localhost:8081/repository/store-release/</url>
+</repository>
+</distributionManagement>
 </project>
