@@ -13,7 +13,7 @@
 
     <groupId>org.seedstack.samples</groupId>
     <artifactId>store-webapp-sample</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -165,7 +165,7 @@
 <repository>
 	<id>nexus</id>
 	<name>nforum release nexus repository</name>
-	<url>http:http://localhost:8081/repository/store-release/</url>
+	<url>http://localhost:8081/repository/store-release/</url>
 </repository>
 </distributionManagement>
 </project>
